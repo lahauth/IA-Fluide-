@@ -1,0 +1,19 @@
+"""
+Test du moteur IA Fluide
+"""
+
+from src.ia_fluide import IAFluide
+import numpy as np
+
+# Initialisation d'une IA fluide avec 5 dimensions
+ia = IAFluide(n_dimensions=5)
+
+# Génération d'une entrée aléatoire
+input_data = np.random.rand(5)
+
+# Évolution de l'IA avec ces données
+output = ia.evolve(input_data)
+
+print("État initial :", ia.state)
+print("Données d'entrée :", input_data)
+print("Résultat après évolution :", output)
